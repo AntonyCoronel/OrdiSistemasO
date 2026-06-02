@@ -1623,6 +1623,8 @@ a:hover {
 }
 
 /* Responsive Breakpoints */
+
+/* Tablet landscape */
 @media (max-width: 1024px) {
     .navbar {
         padding: 1.25rem 2rem;
@@ -1656,16 +1658,49 @@ a:hover {
     }
 }
 
+/* Tablet portrait & phones */
 @media (max-width: 768px) {
-    .section {
-        padding: 4rem 0;
+    body {
+        overflow-x: hidden;
     }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .container-full {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-desc {
+        font-size: 0.95rem;
+    }
+
     .grid-2, .grid-3 {
         grid-template-columns: 1fr;
     }
+
     .col-span-2 {
         grid-column: span 1;
     }
+
+    .gap-4 {
+        gap: 1.5rem;
+    }
+
+    /* Navbar */
     .nav-links, .nav-cta {
         display: none;
     }
@@ -1674,31 +1709,237 @@ a:hover {
     }
     .navbar {
         justify-content: center;
+        padding: 1rem 1.25rem;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding: 5rem 0 3.5rem 0;
     }
     .hero-content h1 {
-        font-size: 2.75rem;
+        font-size: 2.25rem;
+        letter-spacing: -1px;
+    }
+    .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    .hero-visual {
+        max-width: 100%;
+    }
+    .hero-card {
+        border-radius: 12px;
+    }
+    .card-body-hero {
+        padding: 1.25rem;
+    }
+    .spec-item {
+        flex-direction: column;
+        gap: 0.2rem;
+        align-items: flex-start;
+    }
+    .spec-value {
+        font-size: 0.85rem;
+    }
+
+    /* Glassmorphism Cards */
+    .card-glass {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    /* Raspberry Pi Section */
+    .raspberry-board-card {
+        max-width: 100%;
+    }
+    .board-svg-wrapper {
+        padding: 0.5rem;
+    }
+    .rpi-svg {
+        max-height: 220px;
+    }
+    .feature-card {
+        padding: 1.25rem;
+    }
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+    .feature-info h3 {
+        font-size: 1rem;
+    }
+
+    /* Context / Stats Dashboard */
+    .context-explanation h3 {
+        font-size: 1.35rem;
     }
     .dashboard-data {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    .dashboard-tabs {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Architecture Table */
+    .data-table {
+        font-size: 0.78rem;
+    }
+    .data-table th, .data-table td {
+        padding: 0.65rem 0.75rem;
+        white-space: nowrap;
+    }
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -0.5rem;
+        padding: 0 0.5rem;
+    }
+    .data-table {
+        min-width: 580px;
+    }
+
+    /* RAM Visualizer */
+    .ram-visualizer {
+        height: 220px;
+    }
+    .ram-legend {
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.75rem;
+    }
+
+    /* Program Cards */
+    .program-card-header {
+        gap: 1rem;
+    }
+    .program-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.35rem;
+        flex-shrink: 0;
+    }
+    .program-card-body p {
+        font-size: 0.88rem;
+    }
+    .program-specs {
+        flex-wrap: wrap;
+    }
+
+    /* Manual / Steps */
+    .step-card {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+    .step-num {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    .step-info h4 {
+        font-size: 1rem;
+    }
+    .qr-placeholder-icon {
+        font-size: 70px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 3.5rem 0 1.5rem 0;
+    }
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
     .footer-brand {
         grid-column: span 1;
     }
-    .monitor-frame {
-        border-width: 6px;
+    .footer-brand .logo {
+        justify-content: center;
     }
-    .desktop-screen {
-        height: 380px;
+    .footer-brand p {
+        text-align: center;
     }
-    .desktop-window {
-        width: 90% !important;
-        height: 300px !important;
-        left: 5% !important;
-        top: 20px !important;
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-section {
+        padding: 4rem 0 2.5rem 0;
+    }
+    .hero-content h1 {
+        font-size: 1.85rem;
+    }
+    .hero-desc {
+        font-size: 0.9rem;
+    }
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    .section-tag {
+        font-size: 0.75rem;
+    }
+
+    .card-glass {
+        padding: 1.25rem;
+    }
+
+    .spec-label {
+        font-size: 0.8rem;
+    }
+    .spec-value {
+        font-size: 0.8rem;
+    }
+
+    .radial-progress-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    .radial-value {
+        font-size: 1.3rem;
+    }
+
+    .bar-info {
+        font-size: 0.78rem;
+    }
+
+    .data-table {
+        font-size: 0.72rem;
+    }
+
+    .program-card-header h3 {
+        font-size: 1.1rem;
+    }
+    .program-highlights li {
+        font-size: 0.8rem;
+    }
+
+    .step-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-academic h4, .footer-team h4 {
+        font-size: 1rem;
     }
 }
 
