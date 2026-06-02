@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Papus: Educación para Todos</title>
+    <meta name="description" content="Proyecto de educación digital de bajo costo utilizando Raspberry Pi con software educativo offline en zonas con rezago educativo.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-seedling"></i></span>
+            <span class="logo-text">Electro<span>Papus</span></span>
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#raspberry">¿Qué es Raspberry?</a>
+            <a href="#contexto">Contexto Social</a>
+            <a href="#arquitectura">Arquitectura</a>
+            <a href="#programas">Programas</a>
+            <a href="#manual">Manual</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge"><i class="fa-solid fa-graduation-cap"></i> Sistemas Operativos II</span>
+                    <h1>Educación Digital <br><span class="text-gradient">para Todos</span></h1>
+                    <p class="hero-desc">
+                        Transformamos la **Raspberry Pi** en computadoras de bajo costo funcionales, equipadas con un sistema operativo optimizado y herramientas de aprendizaje **offline** para combatir la brecha digital y el rezago educativo.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#programas" class="btn btn-primary"><i class="fa-solid fa-graduation-cap"></i> Ver Programas</a>
+                        <a href="#contexto" class="btn btn-secondary">Conoce el Contexto</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="card-glass hero-card">
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="card-title"><i class="fa-solid fa-microchip"></i> Electro Papus OS v1.0</span>
+                        </div>
+                        <div class="card-body-hero">
+                            <div class="spec-list">
+                                <div class="spec-item">
+                                    <span class="spec-label">Plataforma</span>
+                                    <span class="spec-value">Raspberry Pi 3 Model B</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Memoria SD</span>
+                                    <span class="spec-value">32 GB (Pre-cargada)</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">RAM Requerido</span>
+                                    <span class="spec-value">&approx; 510 MB (De 1 GB disponible)</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Conectividad</span>
+                                    <span class="spec-value">100% Offline (No requiere Internet)</span>
+                                </div>
+                            </div>
+                            <div class="hero-chart-mini">
+                                <div class="progress-bar-container">
+                                    <div class="progress-info">
+                                        <span>Uso de RAM Estimado</span>
+                                        <span>51% (510MB / 1GB)</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 51%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Raspberry Section -->
+        <section id="raspberry" class="section raspberry-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Hardware Accesible</span>
+                    <h2>¿Qué es una Raspberry Pi?</h2>
+                    <p class="section-desc">El cerebro de nuestro proyecto: tecnología de alta eficiencia y bajo costo.</p>
+                </div>
+                
+                <div class="grid grid-2 gap-4">
+                    <div class="raspberry-visual-container">
+                        <div class="raspberry-board-card card-glass">
+                            <!-- Animated SVG / CSS illustration of Raspberry Pi -->
+                            <div class="board-svg-wrapper">
+                                <svg class="rpi-svg" viewBox="0 0 400 300" width="100%" height="100%">
+                                    <!-- Board background -->
+                                    <rect x="50" y="40" width="300" height="220" rx="15" fill="#14532d" stroke="#22c55e" stroke-width="3" />
+                                    <!-- GPIO Header -->
+                                    <rect x="70" y="40" width="220" height="15" fill="#1e293b" />
+                                    <g fill="#e2e8f0">
+                                        <circle cx="80" cy="47.5" r="3" /><circle cx="95" cy="47.5" r="3" /><circle cx="110" cy="47.5" r="3" /><circle cx="125" cy="47.5" r="3" /><circle cx="140" cy="47.5" r="3" /><circle cx="155" cy="47.5" r="3" /><circle cx="170" cy="47.5" r="3" /><circle cx="185" cy="47.5" r="3" /><circle cx="200" cy="47.5" r="3" /><circle cx="215" cy="47.5" r="3" /><circle cx="230" cy="47.5" r="3" /><circle cx="245" cy="47.5" r="3" /><circle cx="260" cy="47.5" r="3" /><circle cx="275" cy="47.5" r="3" />
+                                    </g>
+                                    <!-- CPU Chip -->
+                                    <rect class="pulse-chip" x="180" y="110" width="70" height="70" rx="8" fill="#0f172a" stroke="#3b82f6" stroke-width="2" />
+                                    <text x="215" y="145" fill="#3b82f6" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" font-weight="bold">Broadcom</text>
+                                    <text x="215" y="160" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">CPU SoC</text>
+                                    <!-- RAM Chip -->
+                                    <rect x="270" y="140" width="50" height="50" rx="4" fill="#0f172a" stroke="#e2e8f0" stroke-width="1.5" />
+                                    <text x="295" y="168" fill="#e2e8f0" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">1 GB RAM</text>
+                                    <!-- Ports -->
+                                    <!-- USB -->
+                                    <rect x="330" y="70" width="30" height="40" fill="#64748b" rx="2" />
+                                    <rect x="330" y="130" width="30" height="40" fill="#64748b" rx="2" />
+                                    <!-- Ethernet -->
+                                    <rect x="330" y="190" width="30" height="45" fill="#475569" rx="2" />
+                                    <!-- HDMI -->
+                                    <rect x="130" y="245" width="35" height="20" fill="#475569" rx="2" />
+                                    <!-- Power MicroUSB -->
+                                    <rect x="60" y="250" width="20" height="15" fill="#475569" rx="2" />
+                                    <!-- SD Slot on back -->
+                                    <line x1="45" y1="120" x2="45" y2="170" stroke="#ef4444" stroke-width="6" stroke-linecap="round" />
+                                    <text x="35" y="150" fill="#ef4444" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="end">MEMORIA SD (32GB)</text>
+                                </svg>
+                            </div>
+                            <div class="board-desc text-center">
+                                <h4>Raspberry Pi 3 Model B</h4>
+                                <p>Computadora monoplaca de bajo costo, consumo energético mínimo (&approx; 5W) y alta versatilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-center-y">
+                        <div class="features-list">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="feature-info">
+                                    <h3>Costo Extremadamente Bajo</h3>
+                                    <p>Permite equipar escuelas rurales con presupuestos mínimos en comparación con PCs de escritorio convencionales.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                                <div class="feature-info">
+                                    <h3>Bajo Consumo de Energía</h3>
+                                    <p>Puede operar con paneles solares pequeños o baterías portátiles en zonas con suministro eléctrico inestable.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                                <div class="feature-info">
+                                    <h3>Entorno Offline</h3>
+                                    <p>El sistema está cargado con todo el software educativo y bases de datos locales, eliminando la necesidad de conectarse a Internet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Context Section (Rezago Educativo) -->
+        <section id="contexto" class="section context-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Problema y Realidad</span>
+                    <h2>El Rezago Educativo en México y Oaxaca</h2>
+                    <p class="section-desc">Las cifras detrás de la brecha digital y educativa en nuestro país.</p>
+                </div>
+
+                <div class="grid grid-2 gap-4">
+                    <div class="flex-center-y">
+                        <div class="context-explanation">
+                            <h3>La Brecha Digital en Escuelas Rurales</h3>
+                            <p>
+                                En las comunidades marginadas de nuestro estado, la falta de acceso a recursos tecnológicos y didácticos limita drásticamente el desarrollo de los estudiantes. Escuelas como la Primaria Rural de <strong>San Pedro Huamelula, Oaxaca</strong>, sufren un aislamiento severo: durante años se reportó que sus agencias carecían de internet, televisión abierta y señal telefónica celular.
+                            </p>
+                            <p>
+                                Nuestro proyecto combate esta problemática de raíz: llevando hardware asequible y software cargado de información a las manos de los alumnos, sin depender de redes de telecomunicaciones inexistentes.
+                            </p>
+                            
+                            <div class="quote-card">
+                                <p>"La brecha digital en las escuelas rurales representa una problemática grave por la carencia de recursos bibliográficos y de trabajo."</p>
+                                <span class="quote-author">— Diagnóstico Tecnologías Educativas, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Dashboard -->
+                    <div class="stats-dashboard card-glass">
+                        <h4 class="dashboard-title"><i class="fa-solid fa-chart-simple"></i> Indicadores de Pobreza y Rezago (2026)</h4>
+                        
+                        <!-- Toggle Switch for State vs National -->
+                        <div class="dashboard-tabs">
+                            <button class="tab-btn active" onclick="switchTab('entidad')">Oaxaca (Entidad)</button>
+                            <button class="tab-btn" onclick="switchTab('nacional')">Nacional</button>
+                        </div>
+
+                        <!-- Data Cards wrapper -->
+                        <div class="dashboard-data">
+                            
+                            <!-- Rezago Educativo Progress Circle -->
+                            <div class="data-group text-center">
+                                <div class="radial-progress-wrapper">
+                                    <svg class="radial-svg" viewBox="0 0 120 120">
+                                        <circle class="radial-bg" cx="60" cy="60" r="50"></circle>
+                                        <circle id="rezago-fill" class="radial-fill" cx="60" cy="60" r="50" style="stroke-dashoffset: 108.38;"></circle> <!-- 30.5% default -->
+                                    </svg>
+                                    <div class="radial-value" id="rezago-text">30.5%</div>
+                                </div>
+                                <h5 class="mt-2">Rezago Educativo</h5>
+                                <p class="text-muted" id="rezago-count">1,302,714 personas</p>
+                            </div>
+
+                            <!-- Poverty Bars -->
+                            <div class="poverty-bars-container">
+                                <h5>Niveles de Pobreza</h5>
+                                
+                                <div class="bar-chart-item">
+                                    <div class="bar-info">
+                                        <span>Pobreza General</span>
+                                        <span class="bar-value" id="pob-general-val">51.6%</span>
+                                    </div>
+                                    <div class="bar-track">
+                                        <div id="pob-general-bar" class="bar-fill bg-danger" style="width: 51.6%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="bar-chart-item">
+                                    <div class="bar-info">
+                                        <span>Pobreza Moderada</span>
+                                        <span class="bar-value" id="pob-moderada-val">35.3%</span>
+                                    </div>
+                                    <div class="bar-track">
+                                        <div id="pob-moderada-bar" class="bar-fill bg-warning" style="width: 35.3%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="bar-chart-item">
+                                    <div class="bar-info">
+                                        <span>Pobreza Extrema</span>
+                                        <span class="bar-value" id="pob-extrema-val">16.3%</span>
+                                    </div>
+                                    <div class="bar-track">
+                                        <div id="pob-extrema-bar" class="bar-fill bg-danger-dark" style="width: 16.3%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="dashboard-footer">
+                            <p><i class="fa-solid fa-circle-info"></i> Fuente: Secretaría de Bienestar. Informe Anual Oaxaca, Gob. de México 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Architecture & Memory Calculator -->
+        <section id="arquitectura" class="section architecture-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Eficiencia de Recursos</span>
+                    <h2>Arquitectura del Sistema</h2>
+                    <p class="section-desc">Cómo distribuimos el espacio de almacenamiento y la memoria RAM en la Raspberry Pi 3.</p>
+                </div>
+
+                <div class="grid grid-3 gap-3">
+                    <!-- Left: Table of Resources -->
+                    <div class="col-span-2 card-glass">
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aplicación / Servicio</th>
+                                        <th>Demanda Almacenamiento</th>
+                                        <th>Consumo RAM Est.</th>
+                                        <th>Estado en el Sistema</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="active-row">
+                                        <td><strong><i class="fa-solid fa-linux text-primary"></i> Sistema Operativo Base</strong></td>
+                                        <td>4.0 GB</td>
+                                        <td>150 MB</td>
+                                        <td><span class="status-pill run">Siempre Activo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fa-solid fa-server text-accent"></i> Kiwix-Server (Offline Content)</strong></td>
+                                        <td>50 MB</td>
+                                        <td>50 MB</td>
+                                        <td><span class="status-pill bg-purple">Segundo Plano</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fa-solid fa-gamepad text-success"></i> GCompris-Qt (Juegos Educativos)</strong></td>
+                                        <td>400 MB</td>
+                                        <td>200 MB</td>
+                                        <td><span class="status-pill active-only">Bajo Demanda</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fa-solid fa-file-word text-info"></i> AbiWord (Procesador de Texto)</strong></td>
+                                        <td>150 MB*</td>
+                                        <td>60 MB</td>
+                                        <td><span class="status-pill active-only">Bajo Demanda</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fa-solid fa-file-excel text-success"></i> GNumeric (Hoja de Cálculo)</strong></td>
+                                        <td>Incluido*</td>
+                                        <td>40 MB</td>
+                                        <td><span class="status-pill active-only">Bajo Demanda</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong><i class="fa-solid fa-database text-warning"></i> Base de Datos de Contenidos</strong></td>
+                                        <td>14.0 GB</td>
+                                        <td>0 MB (Lectura en SD)</td>
+                                        <td><span class="status-pill run">Montado</span></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td><strong>Consumo Total Estimado</strong></td>
+                                        <td><strong>&approx; 18.6 GB</strong></td>
+                                        <td><strong>&approx; 510 MB</strong></td>
+                                        <td><span class="status-pill success">Optimizado</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <p class="footnote mt-2">* AbiWord y Gnumeric comparten librerías esenciales del motor de interfaz gráfica GTK, reduciendo el consumo combinado en memoria.</p>
+                    </div>
+
+                    <!-- Right: RAM & Storage Visualizer -->
+                    <div class="card-glass flex-column justify-between">
+                        <div>
+                            <h4>Asignación Dinámica de RAM</h4>
+                            <p class="text-muted small">El límite físico de la Raspberry Pi 3 es 1 GB (1024 MB). Nuestro sistema opera con un amplio margen de seguridad.</p>
+                            
+                            <!-- Interactive RAM allocations representation -->
+                            <div class="ram-visualizer mt-3">
+                                <div class="ram-segment os" style="height: 15%" title="Sistema Operativo (150MB)">
+                                    <span>S.O.</span>
+                                </div>
+                                <div class="ram-segment kiwix" style="height: 6%" title="Kiwix Server (60MB)">
+                                    <span>Kiwix</span>
+                                </div>
+                                <div class="ram-segment gcompris" style="height: 20%" title="GCompris (200MB)">
+                                    <span>GCompris</span>
+                                </div>
+                                <div class="ram-segment office" style="height: 10%" title="Ofimática (100MB)">
+                                    <span>Oficina</span>
+                                </div>
+                                <div class="ram-segment free" style="height: 49%" title="Libre (490MB)">
+                                    <span>Libre (49%)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ram-legend mt-2">
+                            <div class="legend-item"><span class="legend-color os"></span> OS: 150MB</div>
+                            <div class="legend-item"><span class="legend-color kiwix"></span> Kiwix: 60MB</div>
+                            <div class="legend-item"><span class="legend-color gcompris"></span> GCompris: 200MB</div>
+                            <div class="legend-item"><span class="legend-color office"></span> Ofimática: 100MB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Software Showcase Section -->
+        <section id="programas" class="section programs-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Software Educativo</span>
+                    <h2>Programas Incorporados</h2>
+                    <p class="section-desc">Detalle de las herramientas seleccionadas para promover el aprendizaje autónomo y habilidades digitales.</p>
+                </div>
+
+                <div class="grid grid-2 gap-4">
+                    
+                    <!-- Kiwix -->
+                    <div class="card-glass program-card">
+                        <div class="program-card-header">
+                            <div class="program-icon kiwix-icon"><i class="fa-solid fa-server"></i></div>
+                            <div>
+                                <h3>KIWIX</h3>
+                                <span class="program-subtitle">Servidor de Contenido Offline</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <p>Es un servidor de contenido web offline que opera en segundo plano. No necesita una interfaz gráfica, los usuarios acceden remotamente conectándose a la IP de la Raspberry desde cualquier navegador web ligero.</p>
+                            <div class="program-specs mt-2">
+                                <span class="badge badge-storage"><i class="fa-solid fa-database"></i> 50 MB</span>
+                                <span class="badge badge-ram"><i class="fa-solid fa-memory"></i> 40 - 60 MB RAM</span>
+                            </div>
+                            <ul class="program-highlights mt-2">
+                                <li><i class="fa-solid fa-check text-success"></i> Acceso a Wikipedia y libros locales.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Operación sin conexión a Internet.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Acceso multidispositivo mediante red Wi-Fi local.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GCompris -->
+                    <div class="card-glass program-card">
+                        <div class="program-card-header">
+                            <div class="program-icon gcompris-icon"><i class="fa-solid fa-gamepad"></i></div>
+                            <div>
+                                <h3>GCompris-Qt</h3>
+                                <span class="program-subtitle">Suite de Aprendizaje Lúdico</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <p>Suite interactiva de actividades educativas locales. Funciona como una aplicación que interactúa directamente con el servidor gráfico del sistema operativo, proveyendo juegos de matemáticas, lectura y ciencias.</p>
+                            <div class="program-specs mt-2">
+                                <span class="badge badge-storage"><i class="fa-solid fa-database"></i> 400 MB</span>
+                                <span class="badge badge-ram"><i class="fa-solid fa-memory"></i> 200 MB RAM</span>
+                            </div>
+                            <ul class="program-highlights mt-2">
+                                <li><i class="fa-solid fa-check text-success"></i> Más de 100 actividades educativas.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Apto para alumnos de nivel primaria.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Interfaz intuitiva y adaptada a niños.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- AbiWord -->
+                    <div class="card-glass program-card">
+                        <div class="program-card-header">
+                            <div class="program-icon abiword-icon"><i class="fa-solid fa-file-word"></i></div>
+                            <div>
+                                <h3>AbiWord</h3>
+                                <span class="program-subtitle">Procesador de Textos Ligero</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <p>Procesador de textos modular que actúa como un binario ligero, carga solo las bibliotecas esenciales de manipulación de texto bajo una interfaz GTK eficiente y amigable.</p>
+                            <div class="program-specs mt-2">
+                                <span class="badge badge-storage"><i class="fa-solid fa-database"></i> 150 MB</span>
+                                <span class="badge badge-ram"><i class="fa-solid fa-memory"></i> 60 MB RAM</span>
+                            </div>
+                            <ul class="program-highlights mt-2">
+                                <li><i class="fa-solid fa-check text-success"></i> Redacción de reportes y tareas escolares.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Interfaz clásica de herramientas familiares.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Muy bajo consumo de recursos (ideal para RPi).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GNumeric -->
+                    <div class="card-glass program-card">
+                        <div class="program-card-header">
+                            <div class="program-icon gnumeric-icon"><i class="fa-solid fa-file-excel"></i></div>
+                            <div>
+                                <h3>GNumeric</h3>
+                                <span class="program-subtitle">Hoja de Cálculo Independiente</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <p>Hoja de cálculo que funciona como una herramienta independiente y ligera. Ejecuta algoritmos de cálculo matemático directamente en la memoria local, facilitando el análisis y la estadística básica.</p>
+                            <div class="program-specs mt-2">
+                                <span class="badge badge-storage"><i class="fa-solid fa-database"></i> Incluido en GTK</span>
+                                <span class="badge badge-ram"><i class="fa-solid fa-memory"></i> 40 MB RAM</span>
+                            </div>
+                            <ul class="program-highlights mt-2">
+                                <li><i class="fa-solid fa-check text-success"></i> Operaciones aritméticas y matemáticas locales.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Ideal para la iniciación en cómputo administrativo.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Carga instantánea sin latencia en Raspberry.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- User Manual & Flashing Section -->
+        <section id="manual" class="section manual-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Fácil de Instalar</span>
+                    <h2>Manual del Usuario y Flasheo</h2>
+                    <p class="section-desc">Instrucciones sencillas para preparar tu memoria SD y poner a funcionar la computadora.</p>
+                </div>
+
+                <div class="grid grid-3 gap-3">
+                    
+                    <!-- Steps -->
+                    <div class="col-span-2">
+                        <div class="steps-flow">
+                            <div class="step-card card-glass">
+                                <div class="step-num">1</div>
+                                <div class="step-info">
+                                    <h4>Descargar Imagen</h4>
+                                    <p>Descarga la imagen comprimida del sistema pre-cargado desde nuestro repositorio oficial de recursos digitales.</p>
+                                    <button class="btn btn-secondary btn-sm mt-2"><i class="fa-solid fa-download"></i> Descargar Imagen (.img)</button>
+                                </div>
+                            </div>
+                            <div class="step-card card-glass mt-2">
+                                <div class="step-num">2</div>
+                                <div class="step-info">
+                                    <h4>Flashear Memoria SD</h4>
+                                    <p>Inserta una memoria MicroSD de 32GB en tu computadora local y usa la herramienta <strong>Raspberry Pi Imager</strong> o <strong>BalenaEtcher</strong> para grabar la imagen descargada en ella.</p>
+                                </div>
+                            </div>
+                            <div class="step-card card-glass mt-2">
+                                <div class="step-num">3</div>
+                                <div class="step-info">
+                                    <h4>Conectar y Arrancar</h4>
+                                    <p>Inserta la tarjeta SD en la ranura de la Raspberry Pi, conecta un teclado, un mouse, una pantalla o televisión por HDMI y el cable de alimentación. ¡El sistema cargará automáticamente listón para aprender!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QR Code and Manual Link -->
+                    <div class="card-glass text-center flex-column justify-center align-center">
+                        <div class="qr-container">
+                            <i class="fa-solid fa-qrcode qr-placeholder-icon"></i>
+                        </div>
+                        <h4 class="mt-3">Manual Completo en QR</h4>
+                        <p class="text-muted small">Escanea este código QR con tu celular para descargar el manual en PDF con capturas de pantalla detalladas y guías de configuración.</p>
+                        <a href="#" class="btn btn-primary btn-sm mt-2"><i class="fa-solid fa-file-pdf"></i> Descargar PDF</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fa-solid fa-seedling"></i></span>
+                    <span class="logo-text">Electro<span>Papus</span></span>
+                </div>
+                <p>Una iniciativa educativa para reducir la brecha digital en comunidades marginadas del estado de Oaxaca a través de tecnologías de bajo costo.</p>
+            </div>
+            
+            <div class="footer-academic">
+                <h4>Contexto Institucional</h4>
+                <p><strong>Licenciatura en Ingeniería de Software y Sistemas Computacionales</strong></p>
+                <p>Escuela de Ingenierías y Arquitectura</p>
+                <p>Materia: <strong>Sistemas Operativos II</strong></p>
+                <p>Asesor: Martínez Herrera Alí</p>
+            </div>
+
+            <div class="footer-team">
+                <h4>Integrantes del Equipo</h4>
+                <ul>
+                    <li>Coronel Martínez José Antonio</li>
+                    <li>Cruz López Mario Ramón</li>
+                    <li>Gandarillas Sánchez Sebastián Gabriel</li>
+                    <li>Leyva Ortiz Marcos Rodrigo</li>
+                    <li>Mendoza Perez Alisson Suyai</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Electro Papus. Desarrollado con propósitos académicos y de impacto social.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
