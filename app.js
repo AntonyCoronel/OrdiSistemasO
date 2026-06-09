@@ -72,3 +72,32 @@ function switchTab(type) {
     updateBar('pob-moderada-bar', 'pob-moderada-val', data.pobModerada, data.pobModeradaVal);
     updateBar('pob-extrema-bar', 'pob-extrema-val', data.pobExtrema, data.pobExtremaVal);
 }
+
+/* ==========================================================================
+   FAQ Accordion
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        if (!btn) return;
+
+        btn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                const otherBtn = otherItem.querySelector('.faq-question');
+                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle the clicked item
+            if (!isActive) {
+                item.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+});

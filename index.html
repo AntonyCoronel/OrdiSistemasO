@@ -29,6 +29,8 @@
             <a href="#arquitectura">Arquitectura</a>
             <a href="#programas">Programas</a>
             <a href="#manual">Manual</a>
+            <a href="#comandos">Comandos</a>
+            <a href="#faq">FAQ</a>
         </nav>
     </header>
 
@@ -535,6 +537,269 @@
                         <h4 class="mt-3">Manual Completo en QR</h4>
                         <p class="text-muted small">Escanea este código QR con tu celular para descargar el manual en PDF con capturas de pantalla detalladas y guías de configuración.</p>
                         <a href="#" class="btn btn-primary btn-sm mt-2"><i class="fa-solid fa-file-pdf"></i> Descargar PDF</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Basic Commands Section -->
+        <section id="comandos" class="section commands-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Referencia Rápida</span>
+                    <h2>Comandos Básicos de la Terminal</h2>
+                    <p class="section-desc">Guía esencial de comandos para navegar y operar tu Raspberry Pi desde la línea de comandos.</p>
+                </div>
+
+                <div class="commands-grid">
+
+                    <!-- Category: Navigation -->
+                    <div class="cmd-category-card card-glass">
+                        <div class="cmd-category-header">
+                            <div class="cmd-category-icon"><i class="fa-solid fa-folder-open"></i></div>
+                            <h3>Navegación de Archivos</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>ls</code></div>
+                                <p class="cmd-desc">Lista los archivos y carpetas del directorio actual.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>ls -la</code></div>
+                                <p class="cmd-desc">Lista todos los archivos (incluyendo ocultos) con detalles.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>cd nombre_carpeta</code></div>
+                                <p class="cmd-desc">Entra a una carpeta específica.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>cd ..</code></div>
+                                <p class="cmd-desc">Regresa a la carpeta anterior (un nivel arriba).</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>cd ~</code></div>
+                                <p class="cmd-desc">Regresa a la carpeta personal del usuario (Home).</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>pwd</code></div>
+                                <p class="cmd-desc">Muestra la ruta completa del directorio actual.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: File Management -->
+                    <div class="cmd-category-card card-glass">
+                        <div class="cmd-category-header">
+                            <div class="cmd-category-icon file-mgmt"><i class="fa-solid fa-file-pen"></i></div>
+                            <h3>Gestión de Archivos</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>mkdir nueva_carpeta</code></div>
+                                <p class="cmd-desc">Crea una nueva carpeta.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>touch archivo.txt</code></div>
+                                <p class="cmd-desc">Crea un archivo vacío nuevo.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>cp archivo.txt copia.txt</code></div>
+                                <p class="cmd-desc">Copia un archivo con un nuevo nombre.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>mv archivo.txt carpeta/</code></div>
+                                <p class="cmd-desc">Mueve o renombra un archivo.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>rm archivo.txt</code></div>
+                                <p class="cmd-desc">Elimina un archivo (¡cuidado, no va a la papelera!).</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>rm -r carpeta/</code></div>
+                                <p class="cmd-desc">Elimina una carpeta y todo su contenido.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: System -->
+                    <div class="cmd-category-card card-glass">
+                        <div class="cmd-category-header">
+                            <div class="cmd-category-icon system-mgmt"><i class="fa-solid fa-gears"></i></div>
+                            <h3>Sistema y Procesos</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>sudo apt update</code></div>
+                                <p class="cmd-desc">Actualiza la lista de paquetes disponibles.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>sudo apt upgrade</code></div>
+                                <p class="cmd-desc">Instala las actualizaciones de todos los paquetes.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>sudo apt install nombre</code></div>
+                                <p class="cmd-desc">Instala un programa nuevo desde los repositorios.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>sudo reboot</code></div>
+                                <p class="cmd-desc">Reinicia la Raspberry Pi.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>sudo shutdown -h now</code></div>
+                                <p class="cmd-desc">Apaga la Raspberry Pi de forma segura.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>htop</code></div>
+                                <p class="cmd-desc">Muestra los procesos activos y el uso de CPU/RAM en tiempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Info & Network -->
+                    <div class="cmd-category-card card-glass">
+                        <div class="cmd-category-header">
+                            <div class="cmd-category-icon info-net"><i class="fa-solid fa-network-wired"></i></div>
+                            <h3>Información y Red</h3>
+                        </div>
+                        <div class="cmd-list">
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>hostname -I</code></div>
+                                <p class="cmd-desc">Muestra la dirección IP de tu Raspberry Pi.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>df -h</code></div>
+                                <p class="cmd-desc">Muestra el espacio disponible en disco (memoria SD).</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>free -h</code></div>
+                                <p class="cmd-desc">Muestra el uso de memoria RAM.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>cat /proc/cpuinfo</code></div>
+                                <p class="cmd-desc">Muestra información del procesador.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>uname -a</code></div>
+                                <p class="cmd-desc">Muestra información completa del sistema operativo.</p>
+                            </div>
+                            <div class="cmd-item">
+                                <div class="cmd-line"><code>vcgencmd measure_temp</code></div>
+                                <p class="cmd-desc">Muestra la temperatura actual del CPU.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Quick Tip -->
+                <div class="commands-tip card-glass mt-3">
+                    <div class="tip-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="tip-content">
+                        <h4>Consejo: La tecla TAB es tu mejor amiga</h4>
+                        <p>Mientras escribes un comando o nombre de archivo, presiona <code>TAB</code> para autocompletar. Presiona <code>TAB</code> dos veces para ver todas las opciones disponibles. Esto te ahorrará mucho tiempo y evitará errores de escritura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">De Windows a Raspberry Pi</span>
+                    <h2>Preguntas Frecuentes</h2>
+                    <p class="section-desc">Respuestas a las dudas más comunes para quienes vienen de Windows y usan por primera vez un sistema basado en Linux.</p>
+                </div>
+
+                <div class="faq-container">
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span class="faq-q-icon"><i class="fa-solid fa-display"></i></span>
+                            <span>¿El escritorio se ve diferente a Windows?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p>Sí, el escritorio usa un entorno llamado <strong>LXDE/LXQt</strong> que es más ligero que Windows. Pero la idea es la misma: tienes una barra de tareas abajo, un menú de inicio arriba a la izquierda, y puedes abrir aplicaciones haciendo clic. Los iconos del escritorio funcionan igual que en Windows: doble clic para abrir.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span class="faq-q-icon"><i class="fa-solid fa-download"></i></span>
+                            <span>¿Cómo instalo programas? ¿Hay una "tienda"?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p>En lugar de descargar un <code>.exe</code> de Internet como en Windows, en Raspberry Pi se usa la <strong>terminal</strong> con el comando <code>sudo apt install nombre_del_programa</code>. Es más seguro porque todos los programas vienen de repositorios verificados. También puedes usar el menú <strong>"Add/Remove Software"</strong> que funciona como una tienda visual similar a la Microsoft Store.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span class="faq-q-icon"><i class="fa-solid fa-folder"></i></span>
+                            <span>¿Dónde están mis archivos? ¿Hay un "Disco C:"?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p>No existen letras de unidad como <code>C:</code> o <code>D:</code>. En Linux todo parte de una sola raíz <code>/</code>. Tu carpeta personal está en <code>/home/tu_usuario/</code> y es el equivalente a <code>C:\Users\TuNombre\</code> en Windows. Dentro encontrarás carpetas como <strong>Escritorio, Documentos y Descargas</strong>, igual que en Windows.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-answer-4">
+                            <span class="faq-q-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                            <span>¿Qué significa "sudo"? ¿Necesito antivirus?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p><code>sudo</code> significa "Super User DO" y es equivalente a "Ejecutar como Administrador" en Windows. Lo usas cuando necesitas permisos elevados para instalar software o cambiar configuraciones del sistema. En cuanto al antivirus: <strong>Linux es mucho más seguro por diseño</strong>. No necesitas antivirus, ya que el sistema de permisos y los repositorios verificados protegen tu equipo de forma nativa.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-5" aria-expanded="false" aria-controls="faq-answer-5">
+                            <span class="faq-q-icon"><i class="fa-solid fa-terminal"></i></span>
+                            <span>¿Es obligatorio usar la terminal? Me da miedo.</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <p><strong>No es obligatorio.</strong> Puedes usar la Raspberry Pi de forma completamente gráfica: abrir programas desde el menú, mover archivos con el explorador de archivos, y navegar con el mouse como en Windows. La terminal es una herramienta <strong>poderosa pero opcional</strong> para tareas avanzadas. Con el tiempo, descubrirás que muchas cosas son más rápidas desde la terminal.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-6" aria-expanded="false" aria-controls="faq-answer-6">
+                            <span class="faq-q-icon"><i class="fa-solid fa-file-word"></i></span>
+                            <span>¿Puedo abrir archivos de Word, Excel o PowerPoint?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-6">
+                            <p>¡Sí! Nuestro sistema incluye <strong>AbiWord</strong> (procesador de textos) y <strong>GNumeric</strong> (hoja de cálculo). Ambos pueden abrir y guardar archivos en formatos compatibles con Microsoft Office. Si necesitas compatibilidad completa, también puedes instalar <strong>LibreOffice</strong>, que es el equivalente completo y gratuito de Microsoft Office en Linux.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-7" aria-expanded="false" aria-controls="faq-answer-7">
+                            <span class="faq-q-icon"><i class="fa-solid fa-usb"></i></span>
+                            <span>¿Puedo conectar una USB o un disco externo?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-7">
+                            <p>¡Claro que sí! Solo conecta tu memoria USB y aparecerá automáticamente en el escritorio o en el explorador de archivos, similar a Windows. Para expulsarla de forma segura, haz clic derecho en el icono de la USB y selecciona <strong>"Expulsar"</strong> o <strong>"Desmontar"</strong>. La Raspberry Pi 3 tiene <strong>4 puertos USB</strong> disponibles.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item card-glass">
+                        <button class="faq-question" id="faq-btn-8" aria-expanded="false" aria-controls="faq-answer-8">
+                            <span class="faq-q-icon"><i class="fa-solid fa-power-off"></i></span>
+                            <span>¿Cómo apago correctamente la Raspberry Pi?</span>
+                            <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-8">
+                            <p><strong>¡Nunca desconectes el cable directamente!</strong> Esto puede dañar la tarjeta SD y perder tus archivos. Para apagarla correctamente, ve al menú de inicio y selecciona <strong>"Shutdown"</strong>, o abre la terminal y escribe <code>sudo shutdown -h now</code>. Espera a que la luz verde del LED deje de parpadear antes de desconectar el cable de alimentación.</p>
+                        </div>
                     </div>
 
                 </div>
